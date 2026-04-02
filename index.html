@@ -524,6 +524,124 @@
       color: var(--orange-soft);
     }
 
+    .freelancedev-box {
+      position: relative;
+      padding: 36px;
+      overflow: hidden;
+    }
+
+    .freelancedev-box::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(255, 122, 0, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .freelancedev-head {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .freelancedev-badge {
+      width: 68px;
+      height: 68px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffd08a, #ff7a00);
+      color: #2b1800;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 14px 34px rgba(255, 122, 0, 0.24);
+      flex-shrink: 0;
+    }
+
+    .freelancedev-intro {
+      position: relative;
+      z-index: 1;
+    }
+
+    .freelancedev-kicker {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #ffd7aa;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .freelancedev-title {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      line-height: 1.12;
+    }
+
+    .freelancedev-text {
+      max-width: 900px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .freelancedev-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .freelancedev-card {
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .freelancedev-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 122, 0, 0.32);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .freelancedev-card-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 122, 0, 0.10);
+      color: #ffd7aa;
+      font-size: 1.2rem;
+    }
+
+    .freelancedev-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .freelancedev-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .freelancedev-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
     .footer {
       padding: 28px 0 42px;
       text-align: center;
@@ -562,7 +680,8 @@
       .about-grid,
       .contact-grid,
       .services,
-      .projects {
+      .projects,
+      .freelancedev-grid {
         grid-template-columns: 1fr;
       }
 
@@ -598,6 +717,22 @@
       .contact-links {
         justify-content: center;
       }
+
+      .freelancedev-box {
+        padding: 24px;
+      }
+
+      .freelancedev-head {
+        align-items: flex-start;
+      }
+
+      .freelancedev-actions {
+        flex-direction: column;
+      }
+
+      .freelancedev-actions .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -613,6 +748,7 @@
         <a href="#about">Chi sono</a>
         <a href="#services">Servizi</a>
         <a href="#projects">Progetti</a>
+        <a href="#freelancedev">FreelanceDEV</a>
         <a href="#contact">Contatti</a>
       </nav>
     </div>
@@ -800,34 +936,60 @@
     </section>
 
     <section class="section" id="freelancedev">
-  <div class="container">
-    <h2 class="section-title">FreelanceDEV: trovare clienti come sviluppatore</h2>
+      <div class="container">
+        <div class="freelancedev-box glass reveal">
+          <div class="freelancedev-head">
+            <div class="freelancedev-badge">FD</div>
 
-    <p class="section-text">
-      Se sei uno sviluppatore freelance, trovare nuovi clienti in modo costante non è sempre semplice.
-      Per questo ho iniziato a utilizzare 
-      <a href="https://freelancedev.it" target="_blank">FreelanceDEV</a>,
-      una piattaforma pensata per sviluppatori web e professionisti tech.
-    </p>
+            <div class="freelancedev-intro">
+              <span class="freelancedev-kicker">Risorsa utile per developer freelance</span>
+              <h2 class="freelancedev-title">FreelanceDEV: una piattaforma interessante per trovare nuove opportunità</h2>
+            </div>
+          </div>
 
-    <div class="card glass">
-      <p>
-        FreelanceDEV permette di accedere a nuove opportunità, collaborazioni e progetti,
-        facilitando il contatto diretto tra freelance e aziende.
-      </p>
+          <p class="freelancedev-text">
+            Nel lavoro freelance è importante trovare canali in linea con il proprio profilo professionale.
+            Per questo ho dedicato uno spazio a <strong>FreelanceDEV</strong>, una piattaforma pensata per
+            sviluppatori e professionisti del mondo tech che vogliono scoprire nuove collaborazioni,
+            progetti e opportunità lavorative.
+          </p>
 
-      <p>
-        La sto utilizzando per ampliare il mio network e trovare nuovi clienti nel settore sviluppo web.
-      </p>
+          <div class="freelancedev-grid">
+            <article class="freelancedev-card">
+              <div class="freelancedev-card-icon">💼</div>
+              <h3>Nuove opportunità</h3>
+              <p>
+                Una risorsa utile per chi lavora nello sviluppo web e vuole intercettare nuovi progetti
+                in modo più mirato rispetto alle piattaforme generaliste.
+              </p>
+            </article>
 
-      <p>
-        Se sei uno sviluppatore e vuoi aumentare le opportunità di lavoro,
-        ti consiglio di visitare 
-        <a href="https://freelancedev.it" target="_blank">FreelanceDEV</a>.
-      </p>
-    </div>
-  </div>
-</section>
+            <article class="freelancedev-card">
+              <div class="freelancedev-card-icon">⚡</div>
+              <h3>Focus sul tech</h3>
+              <p>
+                FreelanceDEV si rivolge a developer, figure tecniche e professionisti digitali,
+                rendendola particolarmente interessante per chi opera in ambito web e software.
+              </p>
+            </article>
+
+            <article class="freelancedev-card">
+              <div class="freelancedev-card-icon">🚀</div>
+              <h3>Approfondimento dedicato</h3>
+              <p>
+                Ho creato una pagina dedicata per parlarne meglio e raccogliere tutte le informazioni
+                in uno spazio separato e più ordinato.
+              </p>
+            </article>
+          </div>
+
+          <div class="freelancedev-actions">
+            <a class="btn btn-primary" href="/freelancedev.html">Apri la pagina dedicata</a>
+            <a class="btn btn-secondary" href="/freelancedev.html">Leggi l’approfondimento</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="contact">
       <div class="container">

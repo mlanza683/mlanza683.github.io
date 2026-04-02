@@ -2,27 +2,32 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marinella Lanza | Full Stack Developer</title>
   <meta
     name="description"
     content="Marinella Lanza, Full Stack Developer specializzata in Laravel, Node.js, React e API REST. Sviluppo CRM, dashboard e applicazioni web su misura."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
-      --bg: #081018;
-      --bg-2: #0d1622;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-strong: rgba(255, 255, 255, 0.09);
+      --bg: #071018;
+      --bg-2: #0c1622;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-strong: rgba(255, 255, 255, 0.08);
       --border: rgba(255, 255, 255, 0.1);
       --text: #f5f7fb;
       --muted: #a8b3c7;
       --accent: #22c55e;
       --accent-2: #86efac;
+      --orange: #ff7a00;
+      --orange-soft: #ffb36b;
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       --radius: 24px;
       --max: 1180px;
@@ -38,18 +43,18 @@
 
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.14), transparent 26%),
-        linear-gradient(135deg, #050b12 0%, #0a111b 45%, #0b1420 100%);
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.14), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(59, 130, 246, 0.12), transparent 24%),
+        linear-gradient(135deg, #040a11 0%, #09121c 50%, #0b1420 100%);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     img {
@@ -62,14 +67,22 @@
       margin: 0 auto;
     }
 
+    .glass {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
     .section {
       padding: 90px 0;
     }
 
     .section-title {
-      font-size: clamp(2rem, 4vw, 2.8rem);
       margin: 0 0 12px;
       text-align: center;
+      font-size: clamp(2rem, 4vw, 2.8rem);
     }
 
     .section-text {
@@ -80,21 +93,13 @@
       font-size: 1.03rem;
     }
 
-    .glass {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
+      background: rgba(7, 16, 24, 0.72);
       backdrop-filter: blur(14px);
-      background: rgba(8, 16, 24, 0.58);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .nav-inner {
@@ -119,13 +124,13 @@
       width: 42px;
       height: 42px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
       color: white;
       font-weight: 800;
-      box-shadow: 0 10px 28px rgba(34,197,94,0.25);
+      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.25);
     }
 
     .nav-links {
@@ -144,29 +149,31 @@
       min-height: calc(100vh - 74px);
       display: flex;
       align-items: center;
-      padding: 50px 0 40px;
+      padding: 56px 0 44px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 28px;
+      width: 100%;
       align-items: stretch;
     }
 
     .hero-main {
-      padding: 54px;
       position: relative;
       overflow: hidden;
+      padding: 54px;
     }
 
     .hero-main::before {
       content: "";
       position: absolute;
-      inset: auto -120px -120px auto;
-      width: 260px;
-      height: 260px;
-      background: radial-gradient(circle, rgba(34,197,94,0.22), transparent 65%);
+      right: -110px;
+      bottom: -110px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 65%);
       pointer-events: none;
     }
 
@@ -176,12 +183,12 @@
       gap: 10px;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(34,197,94,0.10);
-      border: 1px solid rgba(34,197,94,0.18);
+      margin-bottom: 22px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.18);
       color: #c7f9d7;
       font-size: 0.92rem;
       font-weight: 600;
-      margin-bottom: 24px;
     }
 
     .dot {
@@ -189,28 +196,28 @@
       height: 9px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 16px rgba(34,197,94,0.9);
+      box-shadow: 0 0 16px rgba(34, 197, 94, 0.85);
     }
 
     h1 {
+      margin: 0 0 18px;
       font-size: clamp(2.8rem, 6vw, 5rem);
       line-height: 1.02;
-      margin: 0 0 18px;
       letter-spacing: -0.04em;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #ffffff 0%, #c8ffd8 38%, #86efac 100%);
+      background: linear-gradient(90deg, #ffffff 0%, #d6ffe3 40%, #86efac 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .hero-subtitle {
-      font-size: 1.12rem;
-      color: var(--muted);
       max-width: 720px;
       margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
 
     .cta-row {
@@ -228,7 +235,7 @@
       padding: 14px 20px;
       border-radius: 14px;
       font-weight: 700;
-      transition: transform 0.25s ease, background 0.25s ease, border 0.25s ease;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
     }
 
     .btn:hover {
@@ -238,13 +245,19 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), #16a34a);
       color: #07210f;
-      box-shadow: 0 12px 28px rgba(34,197,94,0.26);
+      box-shadow: 0 12px 28px rgba(34, 197, 94, 0.24);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--text);
+    }
+
+    .btn-addlance {
+      border: 1px solid rgba(255, 122, 0, 0.35);
+      background: rgba(255, 122, 0, 0.08);
+      color: var(--orange-soft);
     }
 
     .tags {
@@ -256,8 +269,8 @@
     .tag {
       padding: 9px 13px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #dfe7f5;
       font-size: 0.9rem;
     }
@@ -266,15 +279,15 @@
       padding: 28px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
       justify-content: space-between;
+      gap: 18px;
     }
 
     .profile-card {
       padding: 22px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .profile-top {
@@ -288,14 +301,14 @@
       width: 74px;
       height: 74px;
       border-radius: 22px;
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      color: white;
       font-size: 1.6rem;
       font-weight: 800;
-      color: white;
-      box-shadow: 0 10px 28px rgba(34,197,94,0.22);
+      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.22);
     }
 
     .profile-top h2 {
@@ -319,15 +332,15 @@
     .stat {
       padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .stat strong {
       display: block;
-      font-size: 1.4rem;
       margin-bottom: 6px;
       color: var(--accent-2);
+      font-size: 1.35rem;
     }
 
     .about-grid,
@@ -347,8 +360,8 @@
     }
 
     .card p {
-      color: var(--muted);
       margin: 0;
+      color: var(--muted);
     }
 
     .services {
@@ -358,31 +371,32 @@
       margin-top: 12px;
     }
 
-    .service {
+    .service,
+    .project {
       padding: 24px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
     .service:hover,
     .project:hover {
       transform: translateY(-4px);
-      border-color: rgba(34,197,94,0.34);
+      border-color: rgba(34, 197, 94, 0.34);
     }
 
     .service-icon {
       width: 48px;
       height: 48px;
+      margin-bottom: 14px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(34,197,94,0.10);
+      background: rgba(34, 197, 94, 0.1);
       color: var(--accent-2);
       font-size: 1.2rem;
-      margin-bottom: 14px;
     }
 
     .service h4,
@@ -404,14 +418,6 @@
       gap: 18px;
     }
 
-    .project {
-      padding: 24px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.07);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
     .project-top {
       display: flex;
       align-items: center;
@@ -421,13 +427,13 @@
     }
 
     .project-badge {
-      font-size: 0.78rem;
-      color: #d1fae5;
+      white-space: nowrap;
       padding: 7px 10px;
       border-radius: 999px;
-      background: rgba(34,197,94,0.09);
-      border: 1px solid rgba(34,197,94,0.18);
-      white-space: nowrap;
+      background: rgba(34, 197, 94, 0.09);
+      border: 1px solid rgba(34, 197, 94, 0.18);
+      color: #d1fae5;
+      font-size: 0.78rem;
     }
 
     .project-link {
@@ -447,13 +453,20 @@
     .contact-link {
       padding: 13px 16px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #edf4ff;
+      transition: border-color 0.25s ease, transform 0.25s ease;
     }
 
     .contact-link:hover {
-      border-color: rgba(34,197,94,0.3);
+      transform: translateY(-2px);
+      border-color: rgba(34, 197, 94, 0.3);
+    }
+
+    .contact-link.addlance {
+      border-color: rgba(255, 122, 0, 0.28);
+      color: var(--orange-soft);
     }
 
     .footer {
@@ -550,6 +563,7 @@
               <a class="btn btn-primary" href="https://github.com/mlanza683" target="_blank">Vedi GitHub</a>
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
               <a class="btn btn-secondary" href="mailto:lanza_marinella@libero.it">Contattami</a>
+              <a class="btn btn-addlance" href="https://www.addlance.com/profili/marinella-lanza/web-designer/cinisello-balsamo/MTA2OTk2" target="_blank">AddLance</a>
             </div>
 
             <div class="tags">
@@ -698,7 +712,7 @@
             <p>
               Repository del profilo usato per presentare competenze, stack tecnico e disponibilità professionale.
             </p>
-            <a class="project-link" href="https://github.com/mlanza683/marinellalanza" target="_blank">Apri repository</a>
+            <a class="project-link" href="https://github.com/mlanza683/mlanza683" target="_blank">Apri repository</a>
           </article>
         </div>
       </div>
@@ -721,6 +735,7 @@
               <a class="contact-link" href="mailto:lanza_marinella@libero.it">Email</a>
               <a class="contact-link" href="https://github.com/mlanza683" target="_blank">GitHub</a>
               <a class="contact-link" href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
+              <a class="contact-link addlance" href="https://www.addlance.com/profili/marinella-lanza/web-designer/cinisello-balsamo/MTA2OTk2" target="_blank">AddLance</a>
             </div>
           </div>
 

@@ -11,17 +11,17 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:Inter,sans-serif;
-      background:#060b10;
+      background:#071018;
       color:#f8fafc;
     }
     a{text-decoration:none;color:inherit}
-    .container{width:min(90%,980px);margin:0 auto}
+    .container{width:min(92%,1150px);margin:0 auto}
     header{
-      padding:30px 0;
+      padding:28px 0;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      color:#9db0c3;
+      color:#9fb0c3;
     }
     .brand{
       font-weight:800;
@@ -29,48 +29,78 @@
       letter-spacing:-.03em;
     }
     .brand span{color:#22c55e}
-    nav{display:flex;gap:24px}
+    nav{display:flex;gap:28px}
     .hero{
       min-height:calc(100vh - 90px);
-      display:flex;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
       align-items:center;
     }
-    .content{
-      max-width:760px;
+    .eyebrow{
+      color:#86efac;
+      font-size:.95rem;
+      margin-bottom:18px;
+      font-weight:600;
     }
     h1{
-      font-size:clamp(3.2rem,8vw,6rem);
+      font-size:clamp(3rem,7vw,5.4rem);
       line-height:.95;
-      letter-spacing:-.07em;
-      margin-bottom:18px;
+      letter-spacing:-.06em;
+      margin-bottom:16px;
     }
-    .lead{
+    .role{
       font-size:1.15rem;
-      color:#86efac;
+      color:#22c55e;
       font-weight:700;
       margin-bottom:18px;
     }
     .desc{
-      color:#9db0c3;
-      font-size:1.03rem;
-      line-height:1.85;
-      max-width:620px;
+      max-width:560px;
+      color:#9fb0c3;
+      font-size:1.02rem;
+      line-height:1.8;
       margin-bottom:28px;
     }
-    .row{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-    }
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
     .btn{
-      padding:14px 20px;
-      border-radius:12px;
+      padding:14px 22px;
+      border-radius:14px;
       font-weight:700;
     }
-    .btn-primary{background:#22c55e;color:#04120a}
-    .btn-secondary{border:1px solid rgba(255,255,255,.12)}
-    @media(max-width:780px){
+    .btn-primary{
+      background:#22c55e;
+      color:#04120a;
+    }
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.12);
+      color:#fff;
+      background:transparent;
+    }
+    .visual{
+      height:520px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(34,197,94,.16), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      display:flex;
+      align-items:flex-end;
+      padding:30px;
+    }
+    .panel{
+      width:100%;
+      border-radius:20px;
+      padding:24px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:#dce7f3;
+    }
+    .panel strong{display:block;color:#86efac;margin-bottom:8px}
+    @media(max-width:900px){
       nav{display:none}
+      .hero{grid-template-columns:1fr;padding:20px 0 60px}
+      .visual{height:320px}
     }
   </style>
 </head>
@@ -79,23 +109,32 @@
     <header>
       <div class="brand">Marinella<span>.dev</span></div>
       <nav>
-        <a href="https://github.com/mlanza683" target="_blank">GitHub</a>
+        <a href="#">Home</a>
+        <a href="https://github.com/mlanza683" target="_blank">Projects</a>
         <a href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
-        <a href="mailto:lanza_marinella@libero.it">Email</a>
+        <a href="mailto:lanza_marinella@libero.it">Contact</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="content">
+      <div>
+        <div class="eyebrow">Disponibile per freelance e opportunità aziendali</div>
         <h1>Marinella<br>Lanza</h1>
-        <div class="lead">Full Stack Developer</div>
+        <div class="role">Full Stack Developer</div>
         <p class="desc">
-          CRM, API REST, dashboard e applicazioni web costruite con Laravel,
-          Node.js e React. Soluzioni pulite, scalabili e orientate al risultato.
+          Sviluppo CRM, API REST, dashboard amministrative e applicazioni web
+          scalabili con un approccio pulito, concreto e orientato al risultato.
         </p>
-        <div class="row">
+        <div class="cta">
           <a class="btn btn-primary" href="mailto:lanza_marinella@libero.it">Contattami</a>
-          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">Vedi progetti</a>
+          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">Vedi GitHub</a>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="panel">
+          <strong>Laravel · Node.js · React</strong>
+          Backend solidi, interfacce pulite, soluzioni su misura.
         </div>
       </div>
     </section>

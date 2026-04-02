@@ -11,8 +11,10 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:Inter,sans-serif;
-      background:#071018;
-      color:#f8fafc;
+      background:
+        radial-gradient(circle at top, rgba(34,197,94,.14), transparent 20%),
+        #081018;
+      color:#fff;
     }
     a{text-decoration:none;color:inherit}
     .container{width:min(92%,1150px);margin:0 auto}
@@ -21,86 +23,70 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      color:#9fb0c3;
     }
-    .brand{
-      font-weight:800;
-      color:#fff;
-      letter-spacing:-.03em;
-    }
+    .brand{font-weight:800;letter-spacing:-.03em}
     .brand span{color:#22c55e}
-    nav{display:flex;gap:28px}
+    nav{display:flex;gap:28px;color:#9fb0c3}
     .hero{
       min-height:calc(100vh - 90px);
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:40px;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
       align-items:center;
     }
-    .eyebrow{
-      color:#86efac;
-      font-size:.95rem;
-      margin-bottom:18px;
-      font-weight:600;
-    }
     h1{
-      font-size:clamp(3rem,7vw,5.4rem);
-      line-height:.95;
+      font-size:clamp(3rem,7vw,5rem);
+      line-height:1;
       letter-spacing:-.06em;
-      margin-bottom:16px;
+      margin-bottom:14px;
     }
     .role{
+      color:#86efac;
       font-size:1.15rem;
-      color:#22c55e;
       font-weight:700;
       margin-bottom:18px;
     }
     .desc{
-      max-width:560px;
-      color:#9fb0c3;
-      font-size:1.02rem;
+      color:#a6b6c8;
+      max-width:520px;
       line-height:1.8;
       margin-bottom:28px;
     }
-    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
     .btn{
       padding:14px 22px;
-      border-radius:14px;
+      border-radius:999px;
       font-weight:700;
     }
-    .btn-primary{
-      background:#22c55e;
-      color:#04120a;
-    }
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      background:transparent;
-    }
-    .visual{
-      height:520px;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:28px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(34,197,94,.16), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    .btn-primary{background:#22c55e;color:#04120a}
+    .btn-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+    .photo-wrap{
       display:flex;
-      align-items:flex-end;
-      padding:30px;
+      justify-content:center;
+      align-items:center;
     }
-    .panel{
+    .photo-ring{
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      padding:16px;
+      background:radial-gradient(circle, rgba(34,197,94,.24), rgba(34,197,94,.05), transparent 70%);
+      box-shadow:0 0 60px rgba(34,197,94,.14);
+    }
+    .photo{
       width:100%;
-      border-radius:20px;
-      padding:24px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-      color:#dce7f3;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid rgba(255,255,255,.08);
+      background:#101826;
     }
-    .panel strong{display:block;color:#86efac;margin-bottom:8px}
     @media(max-width:900px){
       nav{display:none}
-      .hero{grid-template-columns:1fr;padding:20px 0 60px}
-      .visual{height:320px}
+      .hero{grid-template-columns:1fr;padding:10px 0 60px;text-align:center}
+      .desc{margin-left:auto;margin-right:auto}
+      .buttons{justify-content:center}
+      .photo-ring{width:300px;height:300px}
     }
   </style>
 </head>
@@ -118,23 +104,21 @@
 
     <section class="hero">
       <div>
-        <div class="eyebrow">Disponibile per freelance e opportunità aziendali</div>
-        <h1>Marinella<br>Lanza</h1>
+        <h1>Hi, I’m<br>Marinella</h1>
         <div class="role">Full Stack Developer</div>
         <p class="desc">
-          Sviluppo CRM, API REST, dashboard amministrative e applicazioni web
-          scalabili con un approccio pulito, concreto e orientato al risultato.
+          Progetto e sviluppo applicazioni web, CRM, dashboard e API REST
+          con attenzione a struttura, performance e semplicità d’uso.
         </p>
-        <div class="cta">
+        <div class="buttons">
           <a class="btn btn-primary" href="mailto:lanza_marinella@libero.it">Contattami</a>
-          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">Vedi GitHub</a>
+          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">GitHub</a>
         </div>
       </div>
 
-      <div class="visual">
-        <div class="panel">
-          <strong>Laravel · Node.js · React</strong>
-          Backend solidi, interfacce pulite, soluzioni su misura.
+      <div class="photo-wrap">
+        <div class="photo-ring">
+          <img class="photo" src="TUA-FOTO.jpg" alt="Marinella Lanza">
         </div>
       </div>
     </section>

@@ -396,5 +396,96 @@
       </p>
     </div>
   </footer>
+  <div id="cookie-banner" class="cookie-banner" hidden>
+  <div class="cookie-banner__content">
+    <p>
+      Questo sito utilizza cookie e strumenti di tracciamento di terze parti solo previo consenso,
+      anche per misurare le conversioni delle campagne Google Ads.
+      Puoi accettare o rifiutare i cookie non necessari.
+      <a href="/privacy.html">Privacy Policy</a>
+    </p>
+
+    <div class="cookie-banner__actions">
+      <button id="cookie-accept" class="btn btn-primary" type="button">Accetta</button>
+      <button id="cookie-reject" class="btn btn-secondary" type="button">Rifiuta</button>
+    </div>
+  </div>
+</div>
+
+  <script>
+  (function () {
+    const STORAGE_KEY = "ml_cookie_consent_v1";
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const rejectBtn = document.getElementById("cookie-reject");
+
+    const GOOGLE_ADS_ID = "AW-988048547";
+
+    function getConsent() {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function setConsent(value) {
+      try {
+        localStorage.setItem(STORAGE_KEY, value);
+      } catch (e) {}
+    }
+
+    function hideBanner() {
+      if (banner) banner.hidden = true;
+    }
+
+    function showBanner() {
+      if (banner) banner.hidden = false;
+    }
+
+    function loadGoogleAdsTag() {
+      if (window.__googleAdsLoaded) return;
+      window.__googleAdsLoaded = true;
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_ADS_ID;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+      gtag("config", GOOGLE_ADS_ID);
+    }
+
+    const consent = getConsent();
+
+    if (consent === "accepted") {
+      hideBanner();
+      loadGoogleAdsTag();
+    } else if (consent === "rejected") {
+      hideBanner();
+    } else {
+      showBanner();
+    }
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", function () {
+        setConsent("accepted");
+        hideBanner();
+        loadGoogleAdsTag();
+      });
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener("click", function () {
+        setConsent("rejected");
+        hideBanner();
+      });
+    }
+  })();
+</script>
 </body>
 </html>

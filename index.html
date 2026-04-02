@@ -1,20 +1,439 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <title>Marinella Lanza - Full Stack Developer</title>
-  <meta name="description" content="Full Stack Developer specializzata in Laravel, Node.js e API REST. Sviluppo CRM, dashboard e applicazioni web.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marinella Lanza | Full Stack Developer</title>
+  <meta
+    name="description"
+    content="Marinella Lanza, Full Stack Developer specializzata in Laravel, Node.js, React e API REST. Sviluppo CRM, dashboard e applicazioni web scalabili."
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #22c55e;
+      --accent-dark: #16a34a;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34,197,94,0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.18), transparent 30%),
+        linear-gradient(135deg, #0b1120 0%, #111827 55%, #0f172a 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 48px 0;
+    }
+
+    .hero-box {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .main-card,
+    .side-card,
+    .section-card {
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .main-card {
+      padding: 52px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.12);
+      color: #bbf7d0;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 22px;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .highlight {
+      color: #86efac;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: 0.25s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #052e16;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-2px);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #e2e8f0;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .side-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .profile-mini {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #22c55e, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 10px 30px rgba(34,197,94,0.25);
+    }
+
+    .profile-mini h2 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-mini p,
+    .muted {
+      color: var(--muted);
+    }
+
+    .stat-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      color: #86efac;
+    }
+
+    .sections {
+      padding: 20px 0 70px;
+    }
+
+    .section-card {
+      padding: 34px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 16px;
+    }
+
+    .project a {
+      color: #86efac;
+      font-weight: bold;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      padding: 10px 0 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-box,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .main-card {
+        padding: 34px 24px;
+      }
+
+      .side-card,
+      .section-card {
+        padding: 24px;
+      }
+
+      .stat-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .subtitle {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 50px;">
-  
-  <h1>Marinella Lanza</h1>
-  <h2>Full Stack Developer</h2>
-  
-  <p>Sviluppo CRM, API REST e applicazioni web scalabili.</p>
+<body>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <div class="main-card">
+          <div class="eyebrow">Disponibile per freelance e collaborazioni</div>
+          <h1>Marinella Lanza<br><span class="highlight">Full Stack Developer</span></h1>
+          <p class="subtitle">
+            Sviluppo CRM, API REST, dashboard amministrative e applicazioni web scalabili
+            con focus su backend solido, performance e soluzioni concrete per aziende e professionisti.
+          </p>
 
-  <p>
-    <a href="https://github.com/mlanza683">GitHub</a> |
-    <a href="https://www.linkedin.com/">LinkedIn</a>
-  </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/mlanza683" target="_blank">Vedi GitHub</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
+            <a class="btn btn-secondary" href="mailto:lanza_marinella@libero.it">Contattami</a>
+          </div>
 
+          <div class="tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">React</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Docker</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <div class="profile-mini">
+            <div class="avatar">ML</div>
+            <div>
+              <h2>Backend & Web Solutions</h2>
+              <p>Applicazioni su misura per aziende, gestionali e flussi digitali.</p>
+            </div>
+          </div>
+
+          <div class="stat-boxes">
+            <div class="stat">
+              <strong>CRM</strong>
+              Sistemi gestionali personalizzati
+            </div>
+            <div class="stat">
+              <strong>API</strong>
+              Backend modulari e integrabili
+            </div>
+            <div class="stat">
+              <strong>Dashboard</strong>
+              Interfacce chiare e funzionali
+            </div>
+            <div class="stat">
+              <strong>Freelance</strong>
+              Collaborazioni flessibili
+            </div>
+          </div>
+
+          <p class="muted">
+            Realizzo soluzioni pensate per essere utili davvero: stabili, leggibili e facili da evolvere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sections">
+    <div class="container">
+      <div class="section-card">
+        <h2 class="section-title">Progetti in evidenza</h2>
+        <p class="section-text">
+          Alcuni esempi di progetti che rappresentano il mio modo di lavorare.
+        </p>
+
+        <div class="projects">
+          <div class="project">
+            <h3>CRM API Laravel</h3>
+            <p>
+              Backend REST sviluppato in Laravel per la gestione di clienti, aziende e processi interni,
+              con struttura scalabile e autenticazione pronta per frontend moderni.
+            </p>
+            <a href="https://github.com/mlanza683/crm-api-laravel" target="_blank">Apri repository</a>
+          </div>
+
+          <div class="project">
+            <h3>Badge System SaaS</h3>
+            <p>
+              Sistema per presenze e gestione badge con dashboard, logiche di controllo e flusso pensato
+              per utilizzo aziendale.
+            </p>
+            <a href="https://github.com/mlanza683/badge-system-saas" target="_blank">Apri repository</a>
+          </div>
+
+          <div class="project">
+            <h3>Profilo GitHub</h3>
+            <p>
+              Repository profilo pensato per presentare competenze, stack tecnico e disponibilità
+              per collaborazioni freelance e opportunità lavorative.
+            </p>
+            <a href="https://github.com/mlanza683/marinellalanza" target="_blank">Apri repository</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Contatti</h2>
+        <p class="section-text">
+          Se hai un progetto, una collaborazione o un’opportunità lavorativa, puoi contattarmi qui.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:lanza_marinella@libero.it">Email</a>
+          <a href="https://github.com/mlanza683" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Marinella Lanza · Full Stack Developer
+  </footer>
 </body>
 </html>

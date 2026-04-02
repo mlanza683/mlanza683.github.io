@@ -11,82 +11,66 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:Inter,sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(34,197,94,.14), transparent 20%),
-        #081018;
-      color:#fff;
+      background:#060b10;
+      color:#f8fafc;
     }
     a{text-decoration:none;color:inherit}
-    .container{width:min(92%,1150px);margin:0 auto}
+    .container{width:min(90%,980px);margin:0 auto}
     header{
-      padding:28px 0;
+      padding:30px 0;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      color:#9db0c3;
     }
-    .brand{font-weight:800;letter-spacing:-.03em}
+    .brand{
+      font-weight:800;
+      color:#fff;
+      letter-spacing:-.03em;
+    }
     .brand span{color:#22c55e}
-    nav{display:flex;gap:28px;color:#9fb0c3}
+    nav{display:flex;gap:24px}
     .hero{
       min-height:calc(100vh - 90px);
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
+      display:flex;
       align-items:center;
     }
-    h1{
-      font-size:clamp(3rem,7vw,5rem);
-      line-height:1;
-      letter-spacing:-.06em;
-      margin-bottom:14px;
+    .content{
+      max-width:760px;
     }
-    .role{
-      color:#86efac;
+    h1{
+      font-size:clamp(3.2rem,8vw,6rem);
+      line-height:.95;
+      letter-spacing:-.07em;
+      margin-bottom:18px;
+    }
+    .lead{
       font-size:1.15rem;
+      color:#86efac;
       font-weight:700;
       margin-bottom:18px;
     }
     .desc{
-      color:#a6b6c8;
-      max-width:520px;
-      line-height:1.8;
+      color:#9db0c3;
+      font-size:1.03rem;
+      line-height:1.85;
+      max-width:620px;
       margin-bottom:28px;
     }
-    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .row{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
     .btn{
-      padding:14px 22px;
-      border-radius:999px;
+      padding:14px 20px;
+      border-radius:12px;
       font-weight:700;
     }
     .btn-primary{background:#22c55e;color:#04120a}
-    .btn-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
-    .photo-wrap{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    .photo-ring{
-      width:420px;
-      height:420px;
-      border-radius:50%;
-      padding:16px;
-      background:radial-gradient(circle, rgba(34,197,94,.24), rgba(34,197,94,.05), transparent 70%);
-      box-shadow:0 0 60px rgba(34,197,94,.14);
-    }
-    .photo{
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      object-fit:cover;
-      border:6px solid rgba(255,255,255,.08);
-      background:#101826;
-    }
-    @media(max-width:900px){
+    .btn-secondary{border:1px solid rgba(255,255,255,.12)}
+    @media(max-width:780px){
       nav{display:none}
-      .hero{grid-template-columns:1fr;padding:10px 0 60px;text-align:center}
-      .desc{margin-left:auto;margin-right:auto}
-      .buttons{justify-content:center}
-      .photo-ring{width:300px;height:300px}
     }
   </style>
 </head>
@@ -95,30 +79,23 @@
     <header>
       <div class="brand">Marinella<span>.dev</span></div>
       <nav>
-        <a href="#">Home</a>
-        <a href="https://github.com/mlanza683" target="_blank">Projects</a>
+        <a href="https://github.com/mlanza683" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank">LinkedIn</a>
-        <a href="mailto:lanza_marinella@libero.it">Contact</a>
+        <a href="mailto:lanza_marinella@libero.it">Email</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div>
-        <h1>Hi, I’m<br>Marinella</h1>
-        <div class="role">Full Stack Developer</div>
+      <div class="content">
+        <h1>Marinella<br>Lanza</h1>
+        <div class="lead">Full Stack Developer</div>
         <p class="desc">
-          Progetto e sviluppo applicazioni web, CRM, dashboard e API REST
-          con attenzione a struttura, performance e semplicità d’uso.
+          CRM, API REST, dashboard e applicazioni web costruite con Laravel,
+          Node.js e React. Soluzioni pulite, scalabili e orientate al risultato.
         </p>
-        <div class="buttons">
+        <div class="row">
           <a class="btn btn-primary" href="mailto:lanza_marinella@libero.it">Contattami</a>
-          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">GitHub</a>
-        </div>
-      </div>
-
-      <div class="photo-wrap">
-        <div class="photo-ring">
-          <img class="photo" src="TUA-FOTO.jpg" alt="Marinella Lanza">
+          <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank">Vedi progetti</a>
         </div>
       </div>
     </section>

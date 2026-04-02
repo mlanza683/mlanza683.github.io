@@ -5,29 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Marinella Lanza | Full Stack Developer Laravel, Node.js, React</title>
-  <meta name="description" content="Marinella Lanza, Full Stack Developer in Italia. Sviluppo CRM, API REST e applicazioni web con Laravel, Node.js e React. Disponibile per freelance e collaborazioni." />
-  <meta name="keywords" content="Marinella Lanza, Full Stack Developer Italia, Laravel developer, Node.js developer, React developer, sviluppo CRM, API REST, dashboard aziendali, freelance developer Italia" />
+  <meta
+    name="description"
+    content="Marinella Lanza, Full Stack Developer in Italia. Sviluppo CRM, API REST e applicazioni web con Laravel, Node.js e React. Disponibile per freelance e collaborazioni."
+  />
+  <meta
+    name="keywords"
+    content="Marinella Lanza, Full Stack Developer Italia, Laravel developer, Node.js developer, React developer, sviluppo CRM, API REST, dashboard aziendali, freelance developer Italia"
+  />
   <meta name="author" content="Marinella Lanza" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#071018" />
 
   <link rel="canonical" href="https://mlanza683.github.io/" />
   <link rel="alternate" hreflang="it" href="https://mlanza683.github.io/" />
+  <link rel="icon" href="/favicon.ico" />
 
   <meta property="og:title" content="Marinella Lanza | Full Stack Developer" />
-  <meta property="og:description" content="CRM, API REST e applicazioni web scalabili con Laravel, Node.js e React." />
+  <meta
+    property="og:description"
+    content="CRM, API REST e applicazioni web scalabili con Laravel, Node.js e React."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mlanza683.github.io/" />
   <meta property="og:image" content="https://mlanza683.github.io/portfolio.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Marinella Lanza | Full Stack Developer" />
-  <meta name="twitter:description" content="CRM, API REST e applicazioni web scalabili con Laravel, Node.js e React." />
+  <meta
+    name="twitter:description"
+    content="CRM, API REST e applicazioni web scalabili con Laravel, Node.js e React."
+  />
   <meta name="twitter:image" content="https://mlanza683.github.io/portfolio.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
   {
@@ -58,683 +76,6 @@
     ]
   }
   </script>
-
-  <style>
-    :root {
-      --bg: #071018;
-      --bg-soft: #0c1622;
-      --panel: rgba(255, 255, 255, 0.05);
-      --panel-2: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.10);
-      --text: #f5f7fb;
-      --muted: #a8b3c7;
-      --accent: #22c55e;
-      --accent-2: #86efac;
-      --orange: #ff7a00;
-      --orange-soft: #ffb36b;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius: 22px;
-      --max: 1160px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.10), transparent 24%),
-        linear-gradient(135deg, #040a11 0%, #09121c 50%, #0b1420 100%);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      margin: 0 0 12px;
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-    }
-
-    .section-text {
-      max-width: 760px;
-      margin: 0 auto 36px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 1.03rem;
-    }
-
-    .glass {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: rgba(7, 16, 24, 0.72);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .nav-inner {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-      height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
-      color: white;
-      font-weight: 800;
-      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.25);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .hero {
-      min-height: calc(100vh - 74px);
-      display: flex;
-      align-items: center;
-      padding: 56px 0 44px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      width: 100%;
-      align-items: stretch;
-    }
-
-    .hero-main {
-      position: relative;
-      overflow: hidden;
-      padding: 54px;
-    }
-
-    .hero-main::before {
-      content: "";
-      position: absolute;
-      right: -110px;
-      bottom: -110px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 65%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      margin-bottom: 22px;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.18);
-      color: #c7f9d7;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px rgba(34, 197, 94, 0.85);
-    }
-
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #ffffff 0%, #d6ffe3 40%, #86efac 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-subtitle {
-      max-width: 720px;
-      margin-bottom: 28px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 140px;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #16a34a);
-      color: #07210f;
-      box-shadow: 0 12px 28px rgba(34, 197, 94, 0.24);
-    }
-
-    .btn-secondary {
-      border-color: rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .btn-addlance {
-      border-color: rgba(255, 122, 0, 0.35);
-      background: rgba(255, 122, 0, 0.08);
-      color: var(--orange-soft);
-    }
-
-    .btn-addlance:hover {
-      border-color: rgba(255, 122, 0, 0.55);
-      background: rgba(255, 122, 0, 0.12);
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #dfe7f5;
-      font-size: 0.9rem;
-    }
-
-    .hero-side {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .profile-card {
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .profile-top {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .avatar {
-      width: 74px;
-      height: 74px;
-      border-radius: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--accent), #3b82f6);
-      color: white;
-      font-size: 1.6rem;
-      font-weight: 800;
-      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.22);
-    }
-
-    .profile-top h2 {
-      margin: 0 0 4px;
-      font-size: 1.15rem;
-    }
-
-    .profile-top p,
-    .small-muted {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .stat strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--accent-2);
-      font-size: 1.35rem;
-    }
-
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .card {
-      padding: 30px;
-    }
-
-    .card h3 {
-      margin: 0 0 14px;
-      font-size: 1.35rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 12px;
-    }
-
-    .service,
-    .project {
-      padding: 24px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .service:hover,
-    .project:hover {
-      transform: translateY(-4px);
-      border-color: rgba(34, 197, 94, 0.34);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 14px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(34, 197, 94, 0.1);
-      color: var(--accent-2);
-      font-size: 1.2rem;
-    }
-
-    .service h4,
-    .project h4 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
-    }
-
-    .service p,
-    .project p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .project-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .project-badge {
-      white-space: nowrap;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.09);
-      border: 1px solid rgba(34, 197, 94, 0.18);
-      color: #d1fae5;
-      font-size: 0.78rem;
-    }
-
-    .project-link {
-      display: inline-block;
-      margin-top: 16px;
-      font-weight: 700;
-      color: var(--accent-2);
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .contact-link {
-      padding: 13px 16px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #edf4ff;
-      transition: border-color 0.25s ease, transform 0.25s ease;
-    }
-
-    .contact-link:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34, 197, 94, 0.3);
-    }
-
-    .contact-link.addlance {
-      border-color: rgba(255, 122, 0, 0.28);
-      color: var(--orange-soft);
-    }
-
-    .freelancedev-box {
-      position: relative;
-      padding: 36px;
-      overflow: hidden;
-    }
-
-    .freelancedev-box::before {
-      content: "";
-      position: absolute;
-      top: -90px;
-      right: -90px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(255, 122, 0, 0.18), transparent 68%);
-      pointer-events: none;
-    }
-
-    .freelancedev-head {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 22px;
-    }
-
-    .freelancedev-badge {
-      width: 68px;
-      height: 68px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ffd08a, #ff7a00);
-      color: #2b1800;
-      font-size: 1.15rem;
-      font-weight: 800;
-      box-shadow: 0 14px 34px rgba(255, 122, 0, 0.24);
-      flex-shrink: 0;
-    }
-
-    .freelancedev-intro {
-      position: relative;
-      z-index: 1;
-    }
-
-    .freelancedev-kicker {
-      display: inline-block;
-      margin-bottom: 8px;
-      color: #ffd7aa;
-      font-size: 0.84rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .freelancedev-title {
-      margin: 0;
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      line-height: 1.12;
-    }
-
-    .freelancedev-text {
-      max-width: 900px;
-      margin: 0 0 26px;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .freelancedev-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .freelancedev-card {
-      padding: 24px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-    }
-
-    .freelancedev-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 122, 0, 0.32);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .freelancedev-card-icon {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 14px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 122, 0, 0.10);
-      color: #ffd7aa;
-      font-size: 1.2rem;
-    }
-
-    .freelancedev-card h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-    }
-
-    .freelancedev-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .freelancedev-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .footer {
-      padding: 28px 0 42px;
-      text-align: center;
-      color: #8b98b0;
-      font-size: 0.92rem;
-    }
-
-    .seo-helper {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      animation: revealUp 0.8s ease forwards;
-    }
-
-    .delay-1 { animation-delay: 0.08s; }
-    .delay-2 { animation-delay: 0.16s; }
-    .delay-3 { animation-delay: 0.24s; }
-    .delay-4 { animation-delay: 0.32s; }
-
-    @keyframes revealUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .services,
-      .projects,
-      .freelancedev-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-main {
-        padding: 34px 24px;
-      }
-
-      .hero-side,
-      .card {
-        padding: 24px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .cta-row {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .tags,
-      .contact-links {
-        justify-content: center;
-      }
-
-      .freelancedev-box {
-        padding: 24px;
-      }
-
-      .freelancedev-head {
-        align-items: flex-start;
-      }
-
-      .freelancedev-actions {
-        flex-direction: column;
-      }
-
-      .freelancedev-actions .btn {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="nav">
@@ -755,7 +96,9 @@
   </header>
 
   <main id="top">
-    <h2 class="seo-helper">Marinella Lanza Full Stack Developer Italia specializzata in Laravel, Node.js, React, CRM e API REST</h2>
+    <h2 class="seo-helper">
+      Marinella Lanza Full Stack Developer Italia specializzata in Laravel, Node.js, React, CRM e API REST
+    </h2>
 
     <section class="hero">
       <div class="container">
@@ -767,22 +110,28 @@
             </div>
 
             <h1>
-              <span class="gradient-text">Marinella Lanza</span>
+              <span class="gradient-text">
+                Marinella Lanza — Full Stack Developer
+              </span>
             </h1>
 
             <p class="hero-subtitle">
-              Marinella Lanza è una <strong>Full Stack Developer in Italia</strong> specializzata in
-              <strong>Laravel</strong>, <strong>Node.js</strong>, <strong>React</strong> e
-              <strong>API REST</strong>. Realizzo CRM, dashboard e applicazioni web pensate per essere
-              solide, scalabili e davvero utili per aziende e professionisti.
+              Sviluppo <strong>CRM</strong>, <strong>API REST</strong>, dashboard e applicazioni web con
+              <strong>Laravel</strong>, <strong>Node.js</strong> e <strong>React</strong>, con un approccio pratico,
+              pulito e orientato ai risultati per aziende e professionisti.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://github.com/mlanza683" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn btn-primary" href="mailto:lanza_marinella@libero.it">Contattami</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/393491031575" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="btn btn-secondary" href="https://github.com/mlanza683" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a class="btn btn-secondary" href="mailto:lanza_marinella@libero.it">Contattami</a>
               <a class="btn btn-addlance" href="https://www.addlance.com/profili/marinella-lanza/web-designer/cinisello-balsamo/MTA2OTk2" target="_blank" rel="noopener noreferrer">AddLance</a>
             </div>
+
+            <p class="hero-note">
+              Rispondo entro 24h • Collaborazioni rapide • Preventivo gratuito
+            </p>
 
             <div class="tags">
               <span class="tag">Laravel</span>
@@ -1005,6 +354,7 @@
             </p>
             <div class="contact-links">
               <a class="contact-link" href="mailto:lanza_marinella@libero.it">Email</a>
+              <a class="contact-link whatsapp" href="https://wa.me/393491031575" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               <a class="contact-link" href="https://github.com/mlanza683" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a class="contact-link" href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a class="contact-link addlance" href="https://www.addlance.com/profili/marinella-lanza/web-designer/cinisello-balsamo/MTA2OTk2" target="_blank" rel="noopener noreferrer">AddLance</a>

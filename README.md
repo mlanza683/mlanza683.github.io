@@ -1,76 +1,75 @@
-# 🌐 Marinella Lanza - Portfolio
+# 🚀 Marinella Lanza | Full Stack Developer
 
-Landing page professionale sviluppata per presentare competenze, progetti e servizi come Full Stack Developer.
+![Portfolio Preview](./portfolio.png)
 
-👉 Online: https://mlanza683.github.io  
+[![Website](https://img.shields.io/badge/Website-Online-green?style=for-the-badge)](https://mlanza683.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-mlanza683-black?style=for-the-badge&logo=github)](https://github.com/mlanza683)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Marinella%20Lanza-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/marinella-l-0563414b/)
 
 ---
 
 ## 👩‍💻 Chi sono
 
-Sono una Full Stack Developer specializzata nello sviluppo di:
+Sono una **Full Stack Developer** con oltre 10 anni di esperienza nello sviluppo di:
 
-- CRM personalizzati  
-- API REST  
-- Dashboard amministrative  
-- Applicazioni web scalabili  
+- applicazioni web
+- backend su misura
+- CRM personalizzati
+- API REST
 
-Stack principale: Laravel, Node.js, React, MySQL, Docker
+Lavoro principalmente con:
 
----
-
-## 🚀 Obiettivo del progetto
-
-Questa landing è pensata per:
-
-- presentare il mio profilo professionale  
-- mostrare i progetti principali  
-- facilitare il contatto diretto  
-- supportare attività freelance e opportunità lavorative  
+**PHP (Laravel)**, **Node.js**, **React**, **MySQL**, **Docker**
 
 ---
 
-## 🛠️ Tecnologie utilizzate
+## 🧩 Cosa realizzo
 
-- HTML5  
-- CSS3 (custom, no framework)  
-- Design responsive  
-- UI moderna con effetto glassmorphism  
+### 🌐 Creazione siti web
+- Siti web professionali
+- Landing page
+- Design responsive
+- Struttura ottimizzata SEO
 
----
+### ⚙️ Backend & API
+- API REST
+- Backend Laravel e Node.js
+- Autenticazione (JWT, Sanctum)
+- Integrazioni con servizi esterni
 
-## 📌 Sezioni principali
-
-- Hero (presentazione)
-- About
-- Servizi
-- Progetti
-- Contatti
-
----
-
-## 🔗 Contatti
-
-- 🌐 Portfolio: https://mlanza683.github.io  
-- 💻 GitHub: https://github.com/mlanza683  
-- 💼 LinkedIn: https://www.linkedin.com/in/marinella-l-0563414b/  
-- 📧 Email: lanza_marinella@libero.it  
-- 💰 AddLance: https://www.addlance.com/profili/marinella-lanza/web-designer/cinisello-balsamo/MTA2OTk2  
+### 📊 CRM & gestionali
+- CRM personalizzati
+- Dashboard amministrative
+- Gestione utenti, dati e processi
+- Automazioni
 
 ---
 
-## 📈 SEO & Branding
+## 🛠️ Stack Tecnologico
 
-La landing è ottimizzata per:
-
-- Full Stack Developer Italia  
-- Sviluppo CRM  
-- Backend Laravel  
-- API REST  
-- Dashboard aziendali  
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker)
 
 ---
 
-## 📄 Licenza
+## 📂 Pagine principali del sito
 
-Progetto personale a scopo dimostrativo e professionale.
+- 🔗 [Homepage](https://mlanza683.github.io/)
+- 🔗 [PHP Developer](https://mlanza683.github.io/php-developer.html)
+- 🔗 [Node.js Developer](https://mlanza683.github.io/nodejs-developer.html)
+- 🔗 [Creazione Siti Web](https://mlanza683.github.io/creazione-siti-web.html)
+
+---
+
+## 📸 Screenshot
+
+> Inserisci le immagini nella root del progetto
+
+```md
+![Homepage](./home.png)
+![Dashboard](./dashboard.png)
+![Login](./login.png)

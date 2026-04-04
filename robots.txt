@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Blocca eventuali file inutili (opzionale)
+Disallow: /node_modules/
+Disallow: /private/
+
+# Sitemap
 Sitemap: https://mlanza683.github.io/sitemap.xml

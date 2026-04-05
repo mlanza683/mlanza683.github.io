@@ -77,37 +77,37 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">M<span>.LANZA</span></a>
+    <div class="container header-inner">
+      <a href="#top" class="logo">M<span>.LANZA</span></a>
 
-    <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="main-nav" id="mobile-menu">
-      <a href="#services">Servizi</a>
-      <a href="#case">Esempio</a>
-      <a href="#projects">Progetti</a>
-      <a href="#freelancedev">FreelanceDEV</a>
-      <a href="#contact">Parliamone</a>
+      <nav class="main-nav" id="site-menu">
+        <a href="#services">Servizi</a>
+        <a href="#case">Esempio</a>
+        <a href="#projects">Progetti</a>
+        <a href="#freelancedev">FreelanceDEV</a>
+        <a href="#contact">Parliamone</a>
+        <a
+          class="mobile-nav-cta"
+          href="https://wa.me/393491031575?text=Ciao,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni"
+          target="_blank"
+          rel="noopener noreferrer"
+        >WhatsApp</a>
+      </nav>
+
       <a
-        class="mobile-nav-cta"
+        class="header-cta desktop-only"
         href="https://wa.me/393491031575?text=Ciao,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni"
         target="_blank"
         rel="noopener noreferrer"
       >WhatsApp</a>
-    </nav>
-
-    <a
-      class="header-cta desktop-only"
-      href="https://wa.me/393491031575?text=Ciao,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni"
-      target="_blank"
-      rel="noopener noreferrer"
-    >WhatsApp</a>
-  </div>
-</header>
+    </div>
+  </header>
 
   <main id="top">
     <h2 class="seo-helper">
@@ -122,19 +122,10 @@
             Disponibile per freelance e collaborazioni
           </div>
 
-          <h1>Sito web o CRM per la tua attività? Te lo sviluppo in modo semplice e professionale</h1>
+          <h1>Siti web, CRM e backend su misura per aziende e professionisti</h1>
 
           <p class="hero-text">
-            Aiuto aziende, attività e professionisti nella <strong>creazione di siti web professionali</strong>,
-            nello <strong>sviluppo di CRM personalizzati</strong>, nella realizzazione di
-            <strong>API REST</strong> e di <strong>applicazioni web</strong> con
-            <strong>PHP</strong>, <strong>Laravel</strong>, <strong>Node.js</strong> e <strong>React</strong>.
-          </p>
-
-          <p class="hero-text">
-            Realizzo soluzioni chiare, moderne e pensate per essere utili davvero:
-            landing page, pannelli gestionali, backend su misura, dashboard amministrative
-            e flussi digitali facili da gestire nel tempo.
+            Realizzo siti web professionali, CRM personalizzati, API REST e applicazioni web con PHP, Laravel, Node.js e React.
           </p>
 
           <div class="hero-actions">
@@ -145,28 +136,33 @@
               rel="noopener noreferrer"
               onclick="if(window.gtag){gtag('event','conversion',{'send_to':'AW-988048547/9_k9CLyBs5QcEKPZkdcD'});}"
             >
-              Preventivo Gratuito su WhatsApp
+              Preventivo gratuito su WhatsApp
             </a>
           </div>
 
           <div class="hero-links">
-  <a href="mailto:lanza_marinella@libero.it">Email</a>
-  <a href="https://github.com/mlanza683" target="_blank" rel="noopener noreferrer">GitHub</a>
-  <a href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-</div>
+            <a href="mailto:lanza_marinella@libero.it">Email</a>
+            <a href="https://www.linkedin.com/in/marinella-l-0563414b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
         </div>
 
         <div class="hero-device">
           <div class="laptop">
             <div class="laptop-screen">
               <div class="screen-sidebar">
-                <span></span><span></span><span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
+
               <div class="screen-main">
                 <div class="screen-head">
                   <div class="head-line long"></div>
                   <div class="head-line short"></div>
                 </div>
+
                 <div class="screen-panels">
                   <div class="graph-card">
                     <div class="graph"></div>
@@ -175,6 +171,7 @@
                     <div class="pie"></div>
                   </div>
                 </div>
+
                 <div class="mini-stats">
                   <div></div>
                   <div></div>
@@ -182,6 +179,7 @@
                 </div>
               </div>
             </div>
+
             <div class="laptop-base"></div>
           </div>
 
@@ -498,11 +496,11 @@
         ·
         <a href="/creazione-siti-web.html">Creazione Siti Web</a>
       </p>
-       <p>
-      <a href="/privacy.html">Privacy Policy</a>
-      ·
-      <a href="/cookie.html">Cookie Policy</a>
-    </p>
+      <p>
+        <a href="/privacy.html">Privacy Policy</a>
+        ·
+        <a href="/cookie.html">Cookie Policy</a>
+      </p>
     </div>
   </footer>
 
@@ -601,32 +599,29 @@
         });
       }
 
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initCookieBanner);
-      } else {
-        initCookieBanner();
-      }
+      document.addEventListener("DOMContentLoaded", initCookieBanner);
     })();
   </script>
+
   <script>
-  (function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".main-nav");
 
-    if (!toggle || !nav) return;
+      if (!toggle || !nav) return;
 
-    toggle.addEventListener("click", function () {
-      const isOpen = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
+      toggle.addEventListener("click", function () {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
 
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+      nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function () {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
       });
     });
-  })();
-</script>
+  </script>
 </body>
 </html>

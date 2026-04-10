@@ -44,15 +44,20 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand">
+      <div class="brand-lockup">
         <span class="brand-kicker">WEB DEVELOPER</span>
-        <span class="logo">M<span>.LANZA</span></span>
-      </a>
+        <a href="#top" class="logo">M<span>.LANZA</span></a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Apri menu">
+        ☰
+      </button>
 
       <nav class="main-nav" id="site-menu">
         <a href="#services">Servizi</a>
@@ -73,7 +78,7 @@
       <div class="hero-glow hero-glow-right"></div>
 
       <div class="container hero-inner">
-        <div class="hero-desktop">
+        <div class="hero-layout">
           <div class="hero-copy">
             <div class="eyebrow">
               <span class="eyebrow-dot"></span>
@@ -115,7 +120,7 @@
             </div>
           </div>
 
-          <div class="hero-device">
+          <div class="hero-device" aria-hidden="true">
             <div class="hero-card hero-card-main">
               <div class="hero-card-top">
                 <span class="dot pink"></span>
@@ -236,8 +241,7 @@
         <div class="section-head">
           <h2>Chi sono</h2>
           <p>
-            Sono una web developer freelance specializzata in siti web, CRM, applicazioni web e backend su misura
-            per aziende e professionisti.
+            Sono una web developer freelance specializzata in siti web, CRM, applicazioni web e backend su misura per aziende e professionisti.
           </p>
         </div>
 
@@ -245,8 +249,8 @@
           <article class="glass-card">
             <h3>Profilo professionale</h3>
             <p>
-              Sono Marinella Lanza e lavoro con <strong>PHP</strong>, <strong>Laravel</strong>, <strong>Node.js</strong>
-              e <strong>React</strong> per creare progetti chiari, moderni e realmente utili.
+              Sono Marinella Lanza e lavoro con <strong>PHP</strong>, <strong>Laravel</strong>, <strong>Node.js</strong> e
+              <strong>React</strong> per creare progetti chiari, moderni e realmente utili.
             </p>
           </article>
 
@@ -276,7 +280,7 @@
           <article class="project-card">
             <span class="project-tag">CRM / API</span>
             <h3>CRM API Laravel</h3>
-            <p>Problema: gestione clienti dispersa. Soluzione: API REST + dashboard centralizzata.</p>
+            <p><strong>Problema:</strong> gestione clienti dispersa. <strong>Soluzione:</strong> API REST + dashboard centralizzata.</p>
             <p class="stack-mini">Stack: Laravel · MySQL · Sanctum · Swagger</p>
             <div class="project-actions">
               <a href="https://github.com/mlanza683/crm-api-laravel" target="_blank" rel="noopener noreferrer">Repository</a>
@@ -286,7 +290,7 @@
           <article class="project-card">
             <span class="project-tag">SaaS / Dashboard</span>
             <h3>Badge System</h3>
-            <p>Monitoraggio accessi e presenze in tempo reale con dashboard e report.</p>
+            <p><strong>Problema:</strong> monitorare accessi e presenze in tempo reale.</p>
             <p class="stack-mini">Stack: Laravel · Redis · API · React</p>
             <div class="project-actions">
               <a href="https://github.com/mlanza683/badge-system-saas" target="_blank" rel="noopener noreferrer">Repository</a>
@@ -296,7 +300,7 @@
           <article class="project-card">
             <span class="project-tag">Landing / UX</span>
             <h3>Velmora Booking</h3>
-            <p>Landing moderna e mobile-first per migliorare richieste e conversioni.</p>
+            <p><strong>Obiettivo:</strong> aumentare richieste prenotazione con UX mobile-first.</p>
             <p class="stack-mini">Stack: React · UI Design · SEO base</p>
             <div class="project-actions">
               <a href="https://mlanza683.github.io/velmora-demo/" target="_blank" rel="noopener noreferrer">Demo</a>
@@ -307,7 +311,7 @@
           <article class="project-card">
             <span class="project-tag">Beauty / Booking</span>
             <h3>Beauty Landing</h3>
-            <p>Landing semplice e orientata al contatto diretto via WhatsApp.</p>
+            <p><strong>Obiettivo:</strong> acquisire clienti online con CTA diretta.</p>
             <p class="stack-mini">Stack: HTML · CSS · UX</p>
             <div class="project-actions">
               <a href="https://mlanza683.github.io/beauty-landing-react/" target="_blank" rel="noopener noreferrer">Demo</a>
@@ -379,8 +383,8 @@
           <article class="light-card">
             <h3>Stack principale</h3>
             <p>
-              PHP, Laravel, Node.js, React, MySQL, Docker, API REST, CRM e dashboard amministrative per sviluppare
-              progetti chiari, performanti e manutenibili.
+              PHP, Laravel, Node.js, React, MySQL, Docker, API REST, CRM e dashboard amministrative per sviluppare progetti chiari,
+              performanti e manutenibili.
             </p>
 
             <div class="stack-tags">
@@ -411,10 +415,10 @@
             <p>Lo sviluppo di un sito web non è solo grafica: significa struttura tecnica, velocità, SEO e capacità di trasformare visitatori in clienti.</p>
 
             <h3>Creazione siti web su misura</h3>
-            <p>Ogni progetto parte dalle tue esigenze: landing page, sito aziendale o piattaforma più complessa.</p>
+            <p>Ogni progetto parte dalle tue esigenze. Che tu abbia bisogno di una landing page, un sito aziendale o una piattaforma più complessa, sviluppo soluzioni personalizzate.</p>
 
             <h3>Siti web ottimizzati SEO</h3>
-            <p>Ogni sito che realizzo è progettato per essere visibile su Google, con struttura corretta e contenuti ottimizzati.</p>
+            <p>Ogni sito che realizzo è progettato per essere visibile su Google. Struttura corretta, codice pulito e contenuti ottimizzati aiutano il posizionamento.</p>
           </div>
 
           <div>
@@ -426,10 +430,10 @@
             </ul>
 
             <h3>Quanto costa un sito web</h3>
-            <p>Dipende dal progetto: una landing parte da poche centinaia di euro, una soluzione più strutturata richiede un investimento maggiore.</p>
+            <p>Dipende dal progetto. Una landing page parte da poche centinaia di euro, mentre soluzioni più strutturate richiedono un investimento maggiore.</p>
 
             <h3>Perché scegliere un freelance</h3>
-            <p>Contatto diretto, tempi più rapidi e soluzioni realmente su misura.</p>
+            <p>Lavorare con un freelance significa avere un contatto diretto, tempi più rapidi e soluzioni realmente su misura.</p>
           </div>
         </div>
       </div>
@@ -473,14 +477,29 @@
       </span>
       WhatsApp
     </a>
-
     <a href="#contact">Preventivo</a>
   </div>
 
   <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".main-nav");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
     (function () {
       const STORAGE_KEY = "ml_cookie_consent_v1";
-
       const banner = document.getElementById("cookie-banner");
       const acceptBtn = document.getElementById("cookie-accept");
       const rejectBtn = document.getElementById("cookie-reject");
@@ -508,12 +527,7 @@
       }
 
       const consent = getConsent();
-
-      if (!consent) {
-        showBanner();
-      } else {
-        hideBanner();
-      }
+      if (!consent) showBanner();
 
       if (acceptBtn) {
         acceptBtn.addEventListener("click", function () {
